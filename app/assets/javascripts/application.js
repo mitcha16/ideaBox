@@ -18,6 +18,7 @@ $(document).ready(function(){
   getIdeas();
   upvote();
   downvote();
+  createIdea();
 });
 
 function getIdeas(){
@@ -33,7 +34,7 @@ function getIdeas(){
 };
 
 function addIdea(idea){
-  $("#ideas").append(
+  $("#ideas").prepend(
     "<div class='idea' data-id='" +
     idea.id +
     "'><h3>" + idea.title +
@@ -65,19 +66,15 @@ function downvote(){
 function moveQualityUp(id, quality, text) {
   var nextQuality = checkUpQuality(quality);
   var ideaParams = {idea: {quality: nextQuality}}
-  $.ajax({
-    type:    "PATCH",
-    url:     "http://localhost:3000/api/v1/ideas/" + id + ".json",
-    data:    ideaParams,
-    success: function() {
-      text.innerHTML = nextQuality;
-    }
-  });
+  changeQuality(ideaParams, nextQuality, text, id)
 }
 
 function moveQualityDown(id, quality, text) {
   var nextQuality = checkDownQuality(quality);
   var ideaParams = {idea: {quality: nextQuality}}
+  changeQuality(ideaParams, nextQuality, text, id)
+}
+function changeQuality(ideaParams, nextQuality, text, id) {
   $.ajax({
     type:    "PATCH",
     url:     "http://localhost:3000/api/v1/ideas/" + id + ".json",
@@ -106,4 +103,28 @@ function checkDownQuality(quality) {
     return 'Swill'
   }
   return quality
+}
+
+function createIdea() {
+  $("#create-idea").on("click", saveIdea);
+}
+
+function saveIdea(){
+  var ideaParams = {
+    idea: {
+      title: $("#title").val(),
+      body: $("#body").val()
+    }
+  }
+
+  $.ajax({
+    type: "POST",
+    url:  "http://localhost:3000/api/v1/ideas.json",
+    data: ideaParams,
+    success: function(idea) {
+      addIdea(idea);
+      $("#title").empty();
+      $("#body").val('Body')
+    }
+  })
 }
