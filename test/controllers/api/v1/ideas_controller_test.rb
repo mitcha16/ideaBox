@@ -22,7 +22,7 @@ class Api::V1::IdeasControllerTest < ActionController::TestCase
   test '#create json' do
     assert_equal 2, Idea.all.size
 
-    post :create, format: :json, params: {idea: {title: 'idea 3', body: 'an idea'}}
+    post :create, format: :json, idea: {title: 'idea 3', body: 'an idea'}
 
     assert_equal 3, Idea.all.size
     assert_response :success

@@ -65,29 +65,7 @@
         1,
         null
       ],
-      "/Users/mitchashby16/4module/projects/ideabox/app/controllers/api/v1/ideas_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
+      "/Users/mitchashby16/4module/projects/ideabox/app/controllers/ideas_controller.rb": [
         1,
         1,
         null,
@@ -112,13 +90,39 @@
         1,
         null
       ],
-      "/Users/mitchashby16/4module/projects/ideabox/app/controllers/ideas_controller.rb": [
+      "/Users/mitchashby16/4module/projects/ideabox/app/controllers/api/v1/ideas_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        null,
         1,
         1,
         null,
         null
       ]
     },
-    "timestamp": 1444768344
+    "timestamp": 1444845417
   }
 }

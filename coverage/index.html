@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-10-13T14:32:24-06:00">2015-10-13T14:32:24-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-10-14T11:56:57-06:00">2015-10-14T11:56:57-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">89.8%</span></span>
+    (<span class="covered_percent"><span class="yellow">88.24%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.9
+         0.87
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>12</b> files in total.
-    <b>49</b> relevant lines. 
-    <span class="green"><b>44</b> lines covered</span> and
-    <span class="red"><b>5</b> lines missed </span>
+    <b>51</b> relevant lines. 
+    <span class="green"><b>45</b> lines covered</span> and
+    <span class="red"><b>6</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,12 +52,12 @@
       
       <tr>
         <td class="strong"><a href="#7d82c38b24218a68cf9fe84f8e1c649924d828f2" class="src_link" title="app/controllers/api/v1/ideas_controller.rb">app/controllers/api/v1/ideas_controller.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>26</td>
-        <td>14</td>
-        <td>14</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td class="green strong">93.75 %</td>
+        <td>30</td>
+        <td>16</td>
+        <td>15</td>
+        <td>1</td>
+        <td>0.9</td>
       </tr>
       
       <tr>
@@ -189,11 +189,11 @@
         <div class="source_table" id="7d82c38b24218a68cf9fe84f8e1c649924d828f2">
   <div class="header">
     <h3>app/controllers/api/v1/ideas_controller.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="green">93.75 %</span> covered</h4>
     <div>
-      <b>14</b> relevant lines. 
-      <span class="green"><b>14</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>16</b> relevant lines. 
+      <span class="green"><b>15</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -323,34 +323,58 @@
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">  private</code>
+          <code class="ruby">  def update</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="missed" data-hits="0" data-linenumber="22">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    respond_with Idea.find_by(id: params[:id]).update(idea_params), location: nil</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def idea_params</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="24">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    params.permit(:title, :body)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">  end</code>
         </li>
       
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def idea_params</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    params.require(:idea).permit(:title, :body, :quality)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">end</code>

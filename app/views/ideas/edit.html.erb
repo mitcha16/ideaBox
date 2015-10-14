@@ -1,0 +1,12 @@
+<%= form_for @idea, method: :patch do |f| %>
+<div class="form-group">
+  <%= f.label :title, "Title" %>
+  <%= f.text_field :title, class: "form-control" %>
+</div>
+<div class="form-group">
+  <%= f.label :body, "Body" %>
+  <%= f.text_area :body, class: "form-control" %>
+</div>
+
+<%= f.submit "Update Idea", class: "btn btn-success" %>
+<% end %>

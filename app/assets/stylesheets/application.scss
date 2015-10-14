@@ -27,6 +27,8 @@ li{
 }
 
 ul {
+  width: 100%;
+  margin: 0 auto;
   padding-left: 6%;
 }
 
@@ -41,6 +43,11 @@ ul {
 }
 
 #title {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#search {
   width: 100%;
   margin: 0 auto;
 }
@@ -77,4 +84,14 @@ h3 {
 #new-idea {
   width: 40%;
   margin: 0 auto;
+}
+
+#search-box {
+  width: 40%;
+  margin: 0 auto;
+}
+
+#edit {
+  margin-top: 2%;
+  float: right;
 }
