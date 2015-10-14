@@ -10,10 +10,13 @@
         null,
         null
       ],
-      "/Users/mitchashby16/4module/projects/ideabox/test/integration/a_user_can_see_all_ideas_test.rb": [
-        1,
+      "/Users/mitchashby16/4module/projects/ideabox/test/integration/a_user_can_edit_an_idea_test.rb": [
         1,
         null,
+        1,
+        null,
+        1,
+        1,
         1,
         null,
         1,
@@ -24,6 +27,18 @@
       ],
       "/Users/mitchashby16/4module/projects/ideabox/test/rails_helper.rb": [
         1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/mitchashby16/4module/projects/ideabox/test/integration/a_user_can_see_all_ideas_test.rb": [
+        1,
+        1,
+        null,
         1,
         null,
         1,
@@ -65,31 +80,6 @@
         1,
         null
       ],
-      "/Users/mitchashby16/4module/projects/ideabox/app/controllers/ideas_controller.rb": [
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/mitchashby16/4module/projects/ideabox/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        null
-      ],
-      "/Users/mitchashby16/4module/projects/ideabox/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/mitchashby16/4module/projects/ideabox/app/helpers/api/v1/ideas_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/mitchashby16/4module/projects/ideabox/app/helpers/ideas_helper.rb": [
-        1,
-        null
-      ],
       "/Users/mitchashby16/4module/projects/ideabox/app/controllers/api/v1/ideas_controller.rb": [
         1,
         1,
@@ -121,8 +111,48 @@
         1,
         null,
         null
+      ],
+      "/Users/mitchashby16/4module/projects/ideabox/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/mitchashby16/4module/projects/ideabox/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/mitchashby16/4module/projects/ideabox/app/helpers/api/v1/ideas_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/mitchashby16/4module/projects/ideabox/app/helpers/ideas_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/mitchashby16/4module/projects/ideabox/app/controllers/ideas_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1444845417
+    "timestamp": 1444855067
   }
 }

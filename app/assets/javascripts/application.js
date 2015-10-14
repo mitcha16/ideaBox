@@ -172,7 +172,7 @@ function results(query, ideas) {
     }
     else {
       var id = idea.getAttribute('data-id')
-      $(".idea[data-id=" + id+ "]").hide(500);
+      $(".idea[data-id=" + id + "]").hide(500);
     }
   })
 }
