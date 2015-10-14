@@ -19,6 +19,7 @@ $(document).ready(function(){
   upvote();
   downvote();
   createIdea();
+  deleteIdea()
 });
 
 function getIdeas(){
@@ -37,11 +38,12 @@ function addIdea(idea){
   $("#ideas").prepend(
     "<div class='idea' data-id='" +
     idea.id +
-    "'><h3>" + idea.title +
+    "'><br><button id='delete-idea' class='btn btn-default btn-xs'>X</button><h3>" +
+    idea.title +
     "</h3><p>" + idea.body +
     "</p><ul class='vote'><li><button id='downvote' class='btn btn-default btn-xs'>Thumbs Down</button></li>" +
     "<li class='quality'>" + idea.quality + "</li>" +
-    "<li><button id='upvote' class='btn btn-default btn-xs'>Thumbs Up</button></div></li><br>"
+    "<li><button id='upvote' class='btn btn-default btn-xs'>Thumbs Up</button></div></li>"
   )
 }
 
@@ -123,8 +125,24 @@ function saveIdea(){
     data: ideaParams,
     success: function(idea) {
       addIdea(idea);
-      $("#title").empty();
+      $("#title").val('Title')
       $("#body").val('Body')
     }
   })
 }
+
+function deleteIdea(){
+    $("#ideas").delegate("#delete-idea","click", function(){
+      var idea = $(this).closest(".idea")
+      $.ajax({
+        type:    "DELETE",
+        url:     "http://localhost:3000/api/v1/ideas/" + idea.attr('data-id') + ".json",
+        success: function() {
+          idea.remove()
+        },
+        error: function() {
+          idea.remove()
+        }
+      })
+    })
+  }

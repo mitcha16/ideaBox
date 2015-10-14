@@ -27,21 +27,54 @@ li{
 }
 
 ul {
-  padding: 0;
+  padding-left: 6%;
 }
 
 .idea {
   margin-bottom: 3%;
 }
 
-
 #body {
-  width: 40%;
+  width: 100%;
   margin: 0 auto;
   overflow: auto;
 }
 
 #title {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#delete-idea {
+  float: left;
+  margin-top: 2%;
+  margin-right: 2%;
+}
+
+p {
+  margin-left: 7%;
+}
+
+h3 {
+  margin-left: 5%;
+}
+
+.idea {
+  width: 40%;
+  padding-bottom: 4%;
+  margin: 0 auto;
+}
+
+#ideas {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  width: 80%;
+}
+
+#new-idea {
   width: 40%;
   margin: 0 auto;
 }
