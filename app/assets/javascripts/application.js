@@ -17,6 +17,7 @@
 $(document).ready(function(){
   getIdeas();
   upvote();
+  downvote();
 });
 
 function getIdeas(){
@@ -38,7 +39,7 @@ function addIdea(idea){
     "'><h3>" + idea.title +
     "</h3><p>" + idea.body +
     "</p><ul class='vote'><li><button id='downvote' class='btn btn-default btn-xs'>Thumbs Down</button></li>" +
-    "<li>" + idea.quality + "</li>" +
+    "<li class='quality'>" + idea.quality + "</li>" +
     "<li><button id='upvote' class='btn btn-default btn-xs'>Thumbs Up</button></div></li><br>"
   )
 }
@@ -46,20 +47,43 @@ function addIdea(idea){
 function upvote(){
   $("#ideas").delegate("#upvote","click", function(){
     var idea = $(this).closest('.idea')[0].outerHTML.split("\"")[3];
-    var quality = this.closest('.idea').outerHTML.split('<li>')[2]
-    moveQualityUp(idea, quality.substr(0, quality.length - 5));
+    var quality = this.closest('.idea').outerHTML.split('li')[4];
+    var text = $(this).closest('li').prev()[0]
+    moveQualityUp(idea, quality.substr(4, quality.length - 6), text);
   });
 }
 
-function moveQualityUp(id, quality) {
-  var nextQuality = checkUpQuality(quality)
+function downvote(){
+  $("#ideas").delegate("#downvote","click", function(){
+    var idea = $(this).closest('.idea')[0].outerHTML.split("\"")[3];
+    var quality = this.closest('.idea').outerHTML.split('li')[4];
+    var text = $(this).closest('li').next()[0]
+    moveQualityDown(idea, quality.substr(4, quality.length - 6), text);
+  });
+}
+
+function moveQualityUp(id, quality, text) {
+  var nextQuality = checkUpQuality(quality);
   var ideaParams = {idea: {quality: nextQuality}}
   $.ajax({
     type:    "PATCH",
     url:     "http://localhost:3000/api/v1/ideas/" + id + ".json",
     data:    ideaParams,
     success: function() {
-      getIdeas()
+      text.innerHTML = nextQuality;
+    }
+  });
+}
+
+function moveQualityDown(id, quality, text) {
+  var nextQuality = checkDownQuality(quality);
+  var ideaParams = {idea: {quality: nextQuality}}
+  $.ajax({
+    type:    "PATCH",
+    url:     "http://localhost:3000/api/v1/ideas/" + id + ".json",
+    data:    ideaParams,
+    success: function() {
+      text.innerHTML = nextQuality;
     }
   });
 }
@@ -70,6 +94,16 @@ function checkUpQuality(quality) {
   }
   else if (quality == 'Plausible') {
     return 'Genius'
+  }
+  return quality
+}
+
+function checkDownQuality(quality) {
+  if(quality == 'Genius') {
+    return 'Plausible'
+  }
+  else if (quality == 'Plausible') {
+    return 'Swill'
   }
   return quality
 }
