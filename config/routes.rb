@@ -6,5 +6,6 @@ Rails.application.routes.draw do
       resources :ideas
     end
   end
+  mount MagicLamp::Genie, at: '/magic_lamp' if defined?(MagicLamp)
 
 end

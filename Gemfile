@@ -40,6 +40,10 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'simplecov'
   gem 'database_cleaner'
+  gem 'teaspoon'
+  gem 'teaspoon-mocha'
+  gem 'magic_lamp'
+  gem 'phantomjs'
 end
 
 group :development do

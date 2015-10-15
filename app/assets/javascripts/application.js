@@ -130,8 +130,8 @@ function saveIdea(){
     data: ideaParams,
     success: function(idea) {
       addIdea(idea);
-      $("#title").val('Title')
-      $("#body").val('Body')
+      $("#title").val('')
+      $("#body").val('')
     }
   })
 }
@@ -168,7 +168,7 @@ function results(query, ideas) {
   $.each(ideas, function(index, idea){
     if(idea.innerText.toLowerCase().indexOf(query.toLowerCase()) != -1) {
       var id = idea.getAttribute('data-id')
-      $(".idea[data-id=" + id+ "]").show(500);
+      $(".idea[data-id=" + id + "]").show(500);
     }
     else {
       var id = idea.getAttribute('data-id')

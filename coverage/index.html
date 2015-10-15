@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-10-14T14:37:47-06:00">2015-10-14T14:37:47-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-10-15T09:07:13-06:00">2015-10-15T09:07:13-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -143,7 +143,7 @@
       <tr>
         <td class="strong"><a href="#7240620318a9bd5216afdcfcada02b816b4dd286" class="src_link" title="test/integration/a_user_can_edit_an_idea_test.rb">test/integration/a_user_can_edit_an_idea_test.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>13</td>
+        <td>15</td>
         <td>8</td>
         <td>8</td>
         <td>0</td>
@@ -906,43 +906,55 @@
           <code class="ruby">    idea = Idea.create(title: &#39;lame title&#39;, body: &#39;body&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
           <code class="ruby">    visit edit_idea_path(idea.id)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
           <code class="ruby">    fill_in &#39;Title&#39;, with: &#39;cool title&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
+        <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
           <code class="ruby">    click_button &#39;Update Idea&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">    assert_equal &#39;cool title&#39;, Idea.all.last.title</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">end</code>
